@@ -1,0 +1,18 @@
+$main-font: 'Brown', sans-serif;
+$font-path: '../fonts';
+$fa-font-path: $font-path;
+
+$dark-grey-blue: #32325d;
+$dusk: #525f7f;
+$periwinkle: #845cff;
+$dark: #212240;
+$light: #fff;
+
+$grid-gap: 30px;
+$grid-columns: 12;
+$grid-breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+);

@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Brown';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}/Brown-Regular.woff') format('woff'), url('#{$font-path}/Brown-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Brown';
+  font-style: normal;
+  font-weight: bold;
+  src: url('#{$font-path}/Brown-Bold.woff') format('woff'), url('#{$font-path}/Brown-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Brown';
+  font-style: normal;
+  font-weight: 300;
+  src: url('#{$font-path}/Brown-Light.woff') format('woff'), url('#{$font-path}/Brown-Light.ttf') format('truetype');
+}
