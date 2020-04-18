@@ -8,9 +8,9 @@ $periwinkle: #845cff;
 $dark: #212240;
 $light: #fff;
 
-$grid-gap: 30px;
+$grid-gutter: 30px;
 $grid-columns: 12;
-$grid-breakpoints: (
+$breakpoints: (
   'sm': 576px,
   'md': 768px,
   'lg': 992px,
