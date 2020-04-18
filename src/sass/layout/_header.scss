@@ -1,0 +1,116 @@
+.header {
+  background: {
+    image: url('../img/header-bg.png');
+    position: 100% 0%;
+    repeat: no-repeat;
+    size: auto 100%;
+  }
+
+  .container {
+    @extend %container;
+  }
+}
+
+.nav {
+  align-items: center;
+  display: flex;
+  padding-top: 50px;
+
+  &-menu {
+    margin: {
+      left: auto;
+      right: 40px;
+    }
+
+    ul {
+      align-items: center;
+      display: flex;
+    }
+
+    &__item {
+      margin-right: 40px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__link {
+      color: $dark-grey-blue;
+      font: {
+        size: 1.9rem;
+        weight: 700;
+      }
+    }
+  }
+
+  &__button {
+    background-color: $periwinkle;
+    border-radius: 3px;
+    box-shadow: -6.7px 7.4px 20px 0 #845cff33;
+    color: $light;
+    line-height: 1.5;
+    padding: 10px 30px;
+    font: {
+      size: 1.9rem;
+      weight: 700;
+    }
+  }
+}
+
+.intro {
+  padding: {
+    bottom: 150px;
+    top: 200px;
+  }
+
+  &-row {
+    @extend %row;
+  }
+
+  &-content {
+    grid-column: span 6;
+  }
+
+  &__title {
+    color: $dark-grey-blue;
+    line-height: 1.3;
+    margin-bottom: 40px;
+    font: {
+      size: 4.8rem;
+      weight: 700;
+    }
+  }
+
+  &__subtitle {
+    color: $dusk;
+    line-height: 1.4;
+    margin-bottom: 35px;
+    font: {
+      size: 2.3rem;
+      weight: 300;
+    }
+  }
+
+  &__button {
+    background-color: $periwinkle;
+    border-radius: 3px;
+    box-shadow: -6.7px 7.4px 20px 0 #845cff33;
+    color: $light;
+    margin-right: 35px;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    font: {
+      size: 1.9rem;
+      weight: 700;
+    }
+  }
+
+  &__qna {
+    color: $dark-grey-blue;
+    font: {
+      size: 1.9rem;
+      weight: 700;
+    }
+  }
+}
