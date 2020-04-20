@@ -21,9 +21,9 @@
   }
 }
 
-@mixin make-row() {
+@mixin make-row($gutter: $grid-gutter) {
   display: grid;
-  grid-gap: $grid-gutter;
+  grid-gap: $gutter;
   grid-template-columns: repeat($grid-columns, 1fr);
   width: 100%;
 }
