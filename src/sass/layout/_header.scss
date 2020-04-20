@@ -1,4 +1,13 @@
 .header {
+  @include media('<xl', '>lg') {
+    background-size: 50% auto;
+  }
+  @include media('<lg', '>sm') {
+    background-size: auto 50%;
+  }
+  @include media('<sm') {
+    background-size: 100% auto;
+  }
   background: {
     image: url('../img/header-bg.png');
     position: 100% 0%;
@@ -17,21 +26,50 @@
   padding-top: 50px;
 
   &-menu {
-    margin: {
-      left: auto;
-      right: 40px;
+    @include media('>lg') {
+      margin: {
+        left: auto;
+        right: 40px;
+      }
+    }
+    @include media('<lg') {
+      background-color: $light;
+      height: 100vh;
+      left: 0;
+      padding: 50px;
+      position: fixed;
+      top: 0;
+      transform: translateY(-100%);
+      transition: transform 0.25s;
+      width: 100vw;
+
+      &.expanded {
+        transform: none;
+      }
     }
 
     ul {
       align-items: center;
       display: flex;
+      @include media('<lg') {
+        flex-direction: column;
+      }
     }
 
     &__item {
-      margin-right: 40px;
+      @include media('>lg') {
+        margin-right: 40px;
 
-      &:last-child {
-        margin-right: 0;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+      @include media('<lg') {
+        margin-bottom: 15px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 
@@ -42,18 +80,63 @@
         weight: 700;
       }
     }
+
+    // TODO fix button position
+    &__toggler {
+      @include media('>lg') {
+        display: none;
+      }
+      @include media('<lg') {
+        color: $dark-grey-blue;
+        font-size: 3rem;
+        position: fixed;
+        right: 15px;
+        top: 50px;
+
+        i::before {
+          content: '\f00d';
+        }
+      }
+    }
   }
 
   &__button {
     background-color: $periwinkle;
     border-radius: 3px;
-    box-shadow: -6.7px 7.4px 20px 0 #845cff33;
+    box-shadow: -6.7px 7.4px 20px 0 rgba(41, 40, 43, 0.2);
     color: $light;
     line-height: 1.5;
     padding: 10px 30px;
+    @include media('<lg', '>sm') {
+      margin-left: auto;
+    }
+    @include media('<sm') {
+      display: none;
+    }
     font: {
       size: 1.9rem;
       weight: 700;
+    }
+  }
+
+  &-toggler {
+    color: $dark-grey-blue;
+    font-size: 3rem;
+    @include media('>lg') {
+      display: none;
+    }
+    @include media('<lg') {
+      display: block;
+    }
+    @include media('<lg', '>sm') {
+      margin-left: 30px;
+    }
+    @include media('<sm') {
+      margin-left: auto;
+    }
+
+    i::before {
+      content: '\f0c9';
     }
   }
 }
@@ -70,6 +153,15 @@
 
   &-content {
     grid-column: span 6;
+    @include media('<xl') {
+      grid-column: span 8;
+    }
+    @include media('<lg') {
+      grid-column: span 10;
+    }
+    @include media('<md') {
+      grid-column: span 12;
+    }
   }
 
   &__title {
