@@ -48,13 +48,16 @@
     align-items: flex-start;
     background-color: $light;
     border-radius: 10px;
-    box-shadow: -6.7px 7.4px 20px 0 #d4d4fa33;
+    box-shadow: -7px 7px 20px 0 rgba(212, 212, 250, 0.3);
     display: flex;
     flex-direction: column;
     grid-column: span 6;
     padding: 60px 75px 90px;
     @include media('<lg') {
       grid-column: span 12;
+    }
+    @include media('<md') {
+      padding: 10vh 10vw;
     }
 
     &__icon {
